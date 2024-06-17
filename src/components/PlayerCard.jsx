@@ -71,7 +71,7 @@ function PlayerCard({ player, onDecrementScore, showAll}) {
 
   return (
     <div className="flex flex-col p-4 my-auto w-full justify-evenly">
-      <img src={player.imageURL} className={'mx-auto rounded-lg w-1/5 my-2 ' + (imgBlur == 1 ? "blur-md cursor-pointer" : "blur-sm")} onClick={unBlur} />
+      <img src={player.imageURL} className={'mx-auto rounded-lg w-1/5 my-2 ' + (showAll ? "" : (imgBlur == 1 ? "blur-md cursor-pointer" : "blur-sm"))} onClick={unBlur} />
       <div className="flex flex-row">
         {infosItems}
       </div>
